@@ -4,12 +4,15 @@ public class PlayerScript : MonoBehaviour
 {
 
     [SerializeField] private float _jumpForce = 5f;
-
+    [SerializeField] private AudioClip _audio;
     private Rigidbody2D _rb;
+    
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        
+
     }//Start
 
 
