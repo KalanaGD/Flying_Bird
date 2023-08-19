@@ -1,12 +1,17 @@
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerScript : MonoBehaviour
 {
 
     [SerializeField] private float _jumpForce = 5f;
-    [SerializeField] private AudioClip _audio;
     private Rigidbody2D _rb;
-    
+    private int coins = 0;
+
+    [SerializeField] private Text coinText;
+    public GameObject gameoverpanel;
+
 
     void Start()
     {
@@ -20,6 +25,7 @@ public class PlayerScript : MonoBehaviour
     {
         PlayerControll();
 
+
     }//Update
 
     private void PlayerControll()
@@ -31,4 +37,29 @@ public class PlayerScript : MonoBehaviour
         }
 
     }//PlayerControll
+
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        if(target.gameObject.tag == "coin")
+        {
+            Destroy(target.gameObject);
+            coins++;
+            coinText.text = "Score : " + coins;
+           
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D target)
+    {
+        if(target.gameObject.tag == "bounder")
+        {
+            Destroy(this.gameObject);
+            gameoverpanel.SetActive(true);
+
+        }
+    }
+
+
+
+
 }

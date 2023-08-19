@@ -4,7 +4,21 @@ using UnityEngine;
 
 public class Collections : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _collectPrefabs;
+    private Rigidbody2D rb;
+    public float speed;
 
-    
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        rb.velocity = Vector2.left * speed;
+        
+    }
+
+
+
+
 }
