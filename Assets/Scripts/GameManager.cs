@@ -14,12 +14,12 @@ public class Spawner : MonoBehaviour
         if (timer > timeToSpawn)
         {
             timer = 0;
-            int randNum = Random.Range(0, spawnPoints.Length); // Corrected range
+            int randNum = Random.Range(0, spawnPoints.Length); 
             GameObject newObject = Instantiate(spawnObjects, spawnPoints[randNum].transform.position, Quaternion.identity);
 
-            // Attach the DestructionTimer script to the spawned object
+           
             DestructionTimer destructionTimer = newObject.AddComponent<DestructionTimer>();
-            destructionTimer.destroyAfterSeconds = 5.0f; // Adjust the time as needed
+            destructionTimer.destroyAfterSeconds = 5.0f; 
         }
     }
 }

@@ -2273,6 +2273,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1995285769}
     - target: {fileID: 1685435142101503992, guid: ffe62373c5dac0d47924629c2053ec76, type: 3}
+      propertyPath: _jumpForce
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685435142101503992, guid: ffe62373c5dac0d47924629c2053ec76, type: 3}
       propertyPath: gameoverpanel
       value: 
       objectReference: {fileID: 730614781}
@@ -2331,6 +2335,14 @@ PrefabInstance:
     - target: {fileID: 7197848041171077689, guid: ffe62373c5dac0d47924629c2053ec76, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240186217986127252, guid: ffe62373c5dac0d47924629c2053ec76, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240186217986127252, guid: ffe62373c5dac0d47924629c2053ec76, type: 3}
+      propertyPath: m_GravityScale
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
